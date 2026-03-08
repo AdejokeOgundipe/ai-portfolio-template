@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{YOUR_NAME}} - AI/ML Portfolio</title>
+<!-- Basic SEO + Open Graph (customize these placeholders) -->
+<meta name="description" content="{{SHORT_BIO}} — portfolio of {{YOUR_NAME}}, AI / ML engineer. Projects, research and articles." />
+<meta name="author" content="{{YOUR_NAME}}" />
+<meta name="keywords" content="AI, machine learning, portfolio, research, projects, {{YOUR_NAME}}" />
+<link rel="icon" href="/favicon.ico" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{YOUR_NAME}} — AI/ML Portfolio" />
+<meta property="og:description" content="{{SHORT_BIO}}" />
+<meta property="og:image" content="{{OG_IMAGE_URL}}" />
+<meta property="og:url" content="{{SITE_URL}}" />
+<meta name="twitter:card" content="summary_large_image" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Custom minimal stylesheet (can be extended or replaced) -->
+<link rel="stylesheet" href="./styles.css" />
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2badee",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101c22",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .ai-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(43, 173, 238, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+    <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 ai-grid transition-colors duration-300">
+    <!-- Skip link for keyboard users -->
+    <a class="sr-only focus:not-sr-only absolute left-4 top-4 z-50 rounded bg-primary text-background-dark px-3 py-2" href="#main-content">Skip to content</a>
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<span class="text-xl font-bold tracking-tight">{{YOUR_NAME}}</span>
+</div>
+    <nav id="primary-nav" class="hidden md:flex space-x-8 text-sm font-medium" role="navigation" aria-label="Primary">
+<a class="hover:text-primary transition-colors" href="#about">About</a>
+<a class="hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="hover:text-primary transition-colors" href="#research">Research</a>
+<a class="hover:text-primary transition-colors" href="#blog">Blog</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+    <!-- Mobile nav toggle -->
+    <button id="mobile-nav-toggle" class="md:hidden p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:ring-2 ring-primary transition-all" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <!-- Dark mode toggle -->
+    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:ring-2 ring-primary transition-all" aria-pressed="false" aria-label="Toggle dark mode">
+    <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+    </button>
+</div>
+</div>
+</div>
+</header>
+    <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Hero Section -->
+<section class="py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Available for collaborations
+                </div>
+<h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight">
+                    {{YOUR_NAME}}<br/>
+<span class="text-primary italic">— {{YOUR_ROLE}}</span>
+</h1>
+<p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                    {{SHORT_BIO}}
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-primary text-background-dark font-bold rounded-lg hover:opacity-90 transition-all flex items-center gap-2" href="#projects">
+                        View Projects <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border border-slate-300 dark:border-slate-700 font-bold rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center gap-2" href="./cv/resume.pdf" download="{{YOUR_NAME}}-Resume.pdf" aria-label="Download resume as PDF">
+                        Download Resume <span class="material-symbols-outlined">download</span>
+</a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+<img alt="AI Neural Network Visual" class="w-full h-full object-cover" data-alt="Abstract 3D neural network structure blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA7L76AeGXiXtoAa4wnVVm5LnxASKIdXldJupgK4I0YO89t0x9uiNWH44jZDeplyvTyIFlS5soCgnvf_nwS2kxQKLmubaYAkF89b7BJ2q2gQHsTmE61vGWBsSewBvHESw4Mf57FxjZwWFuH1-gDtn0kvboJtQBTWSeMeIW9a6ZVabfSFLHtOzVIaAzG1k_VH7QKZYrM6jzlweJuQq5GvIZEy4M6YeAQUv1TQGsBzswnrkymdEPwta-x7yX_ZU003_37uIgKcdRPRA"/>
+</div>
+<!-- Floating Card -->
+<div class="absolute -bottom-6 -left-6 p-6 rounded-xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Job Title</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-20 border-t border-slate-200 dark:border-slate-800" id="about">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-1">
+<h2 class="text-3xl font-bold mb-4">About Me</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<div class="lg:col-span-2 space-y-6">
+<p class="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
+                        {{ABOUT_ME}}
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div>
+<p class="text-primary text-4xl font-black">{{YEARS_OF_EXPERIENCE}}+</p>
+<p class="text-sm uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Years Experience</p>
+</div>
+<div>
+<p class="text-primary text-4xl font-black">Specialist</p>
+<p class="text-sm uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">{{SPECIALIZATION}}</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-20" id="skills">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Technical Stack</h2>
+<p class="text-slate-600 dark:text-slate-400">Mastering the tools of the future</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Languages -->
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">code</span>
+<h3 class="text-xl font-bold mb-4">Languages</h3>
+<ul class="space-y-2 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{LANGUAGE_1}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{LANGUAGE_2}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{LANGUAGE_3}}</li>
+</ul>
+</div>
+<!-- ML Skills -->
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">psychology</span>
+<h3 class="text-xl font-bold mb-4">ML / AI Core</h3>
+<ul class="space-y-2 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{ML_SKILL_1}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{ML_SKILL_2}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{ML_SKILL_3}}</li>
+</ul>
+</div>
+<!-- Tools -->
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">construction</span>
+<h3 class="text-xl font-bold mb-4">Frameworks &amp; Tools</h3>
+<ul class="space-y-2 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{TOOL_1}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{TOOL_2}}</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> {{TOOL_3}}</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-20 border-t border-slate-200 dark:border-slate-800" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<h2 class="text-3xl font-bold mb-4">Selected Projects</h2>
+<p class="text-slate-600 dark:text-slate-400">Research turned into real-world applications</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
+                    All GitHub Repositories <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1-6 Repeat Template -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Project Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Code on a laptop screen with neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUuBB4DlmBQBTqcdA31wcg3q_3yMcc9Y7bkm8leAKukxLtOvoFt1kUmvoxsydyOZdYZP1Xeam56A9HGtTZcYntV4_q4CiXHp53jH0F9RLJPeFT9NJsneDPVdOKHMMMCygFFVoBXYzWE5AAZWKohvY_SiuABl4hPEhRSZ_hTU_wXy_pmd-79-Xl5QgIKg8kwdDtqszyrnnWPmfDuXqJY_oKROpUScTfIzgFN-742chc3c4iyzlS6n7VH2oGpojRLme5v6AX0nXRUCI"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Data visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic data visualization screens with blue nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8RkEH2wK2oWwysaV5TECNzWNqJ7JKfF5W4ozLLU-0tJcW-iZCC03aH_7ju7PyQ9LMphWouBJ6kdpsRxs-_bgIwpNPHllGjkhAL94QNZXZBFxg70YXZJ58qTdp4QsGSFMCN76YJuKy67e0fm8u-KHp_-b2p6iuw3cUXS4QhFuGeXRa4JqaKGEaTCu8Uc-p7b8xUSKwRf6gKapoX2o-KE3vQxI3CX5IzY7DqX8fN2CaoPnX6s52mCMMA90E23WI049PeHMaxwuNNxQ"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Robot arm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High tech robotic arm in sterile environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3P5FTITzRhyMoQ5vbRQajbn1-pNrnETkGQcmeMeaXeE4lggq2yd6Ahu1Z-KN0j2y4BSSopZumdfYumGECQJq1dbDy7YGtX0F6K8GgykJqXn89cbdk-3nIgF5JLaCWwKODv3nItpWyQlLE7rXTKzQz-tUmi_TWpM7ws2OgussY4XOTyUX85McuCmRLvuI1XznQ2_0bFcmodZQ1L_J2Ig5tsaAYVlx6K6Sp32-e6cn_AQHq5mwGTi4MkP0cLdYJlzknkiABAHlseoM"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+<!-- Repeat more cards as needed -->
+<!-- Duplicate for full 6 cards layout -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Cyber security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Digital representation of secure lock and data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCQ5KJRss6eDw-OMaMo-TYlyMfTC3vYICzn59ITjRwlMaag0BrA3pSiXkr859qcz6os1WWq4OXEPpFLYB439haf_TdX1-VByJVVVnePhiLN6nH8spaiNE7aXABN3U70a3BCS2rj3J7yjAsYopOvGbUUKXWfy8XPdyYVHksqhjS7m7ZeiAXM_NUCOHtMKtadnlZZHJy_tJMyg4mF5y5TUdoDHOMIYMjEGnoejFjASUTl0-Nf2GvaVlUHxx2hkLsBLopvPQ2XSSOBKM"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="AI Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalistic robot head with glowing blue eye" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWaZk5gt-OsrccUd30TQ_53YpyGN_VL8EdA95CvpSI3WW7da0YAQs8YQ-naFFjY3Od7YnWrmXI1meNc-8mx45NdstG9L8KtISTqmyWi8GR_Dd9hPYX7Eb5n_RsGmgF-NZf_TWbNvyqq7a91Cy3zOswTs9JlYxKI91QnedsyC8wuYC_Dqa7II_BEaNreR0SjCJqzKH-It6QA-wJBGn2JXAiYsNvAkkVTx93JfvX9CAY9vU5lv8GeHUgkBpI6Zv0PFa8Z0HiN4ymIc"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="h-48 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Technological circuit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High quality photography of circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QMCkIQDaxERxsHAWGQaqNZxjUCquCwj5FLsEs2m6cjzgxRFbc3jirU-E9NnJfIILYqX5b5mcOd3vWJ1GKGfcl0DnENkhqYNAqLyUEOzcKJ3lV-CoheQJLv5PRzekAMmTSO8khq_27LH3s-FFylWeIlhRtKWpGIAhsrANf3DdNroAdNi4iVx5KJMQNC6kjYaMoItA5Wte8TWo8fBeuMYu0e_S8PQwMIeB2d3drWr-lO4KhiAFV1q894K9iWERVneO34Jw_BoQWoY"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 rounded">{{TECH_STACK}}</span>
+</div>
+<h3 class="text-xl font-bold mb-2">{{PROJECT_NAME}}</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">{{PROJECT_DESCRIPTION}}</p>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_GITHUB_LINK}}">
+<span class="material-symbols-outlined text-lg">code</span> Code
+                            </a>
+<a class="text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors" href="{{PROJECT_DEMO_LINK}}">
+<span class="material-symbols-outlined text-lg">visibility</span> Demo
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Research Section -->
+<section class="py-20" id="research">
+<h2 class="text-3xl font-bold mb-12">Research &amp; Publications</h2>
+<div class="space-y-6">
+<div class="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all">
+<div class="flex flex-col md:flex-row justify-between gap-4">
+<div class="space-y-2">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Published @ Conference/Journal</span>
+<h3 class="text-xl font-bold">{{RESEARCH_TITLE}}</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-4xl">{{RESEARCH_DESCRIPTION}}</p>
+</div>
+<div class="flex-shrink-0">
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg font-bold text-sm hover:ring-2 ring-primary transition-all" href="{{PUBLICATION_LINK}}">
+                                Read Paper <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Duplicate Research Entry -->
+<div class="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all">
+<div class="flex flex-col md:flex-row justify-between gap-4">
+<div class="space-y-2">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Work In Progress</span>
+<h3 class="text-xl font-bold">{{RESEARCH_TITLE}}</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-4xl">{{RESEARCH_DESCRIPTION}}</p>
+</div>
+<div class="flex-shrink-0">
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg font-bold text-sm hover:ring-2 ring-primary transition-all" href="{{PUBLICATION_LINK}}">
+                                Read Paper <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-20 border-t border-slate-200 dark:border-slate-800" id="blog">
+<h2 class="text-3xl font-bold mb-12">Insights &amp; Articles</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<article class="flex gap-6 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="hidden sm:block w-32 h-32 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Blog Thumb" class="w-full h-full object-cover" data-alt="Abstract colorful light waves background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx1sPahHaFxf95XH5dlwS2h-uNnzTErFa5wvyhC7jecYQHPSpqVlhu2Yk0IOhdtKFvwn5xSs-e-IbuTgdz2E7X6d884TtnyICXXv6Ze5m9G-06ueyKLblY94jDAmhAhsSevc7jx2ZdMGm2EbW1eYDoVYfsyVTj-sLRl8McF2ARO4ZdRA1dSH2F6FqxjTAuD-bKQZbKVW5r_f5GPNbHSRmvbK4zvdTe5llcH_mREJbR6fDAxVna_Ftw_Abgl98s7sBQ5ETE76GCKJU"/>
+</div>
+<div>
+<time class="text-xs font-bold text-slate-500 uppercase tracking-widest">Oct 24, 2023</time>
+<h3 class="text-xl font-bold my-2 group hover:text-primary"><a href="{{BLOG_LINK}}">{{BLOG_TITLE}}</a></h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">{{BLOG_DESCRIPTION}}</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1" href="{{BLOG_LINK}}">Read Post <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</article>
+<article class="flex gap-6 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="hidden sm:block w-32 h-32 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Blog Thumb" class="w-full h-full object-cover" data-alt="Abstract block technology graphic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK9lpChUFzGDhlLDmTbQOUerMHrKbMkzifgrUCQl-pPnhnxXpOT2htpn2z4TVmkIhBBl2P53-GM9vHtBTm_THZ0cwVT3NCpzXY-mKda8oHFwn7Nc-3CBPGuk-4xqobbe5ukavLbLFe8xj3ZVVdGH9WFmKn15ht6A5HTOfgw3Rzar6y6B6-yivc1Q_wOTWT6_Ujs5j3eFMfZZdy6V1daT068zKQLtfHboTN1hCEj_N8r3lpk6OcJdxpNsriSWZoALACfEphv0_VzIw"/>
+</div>
+<div>
+<time class="text-xs font-bold text-slate-500 uppercase tracking-widest">Sep 15, 2023</time>
+<h3 class="text-xl font-bold my-2 group hover:text-primary"><a href="{{BLOG_LINK}}">{{BLOG_TITLE}}</a></h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">{{BLOG_DESCRIPTION}}</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1" href="{{BLOG_LINK}}">Read Post <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</article>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 border-t border-slate-200 dark:border-slate-800" id="contact">
+<div class="grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-4xl font-black mb-6">Let's build the future <span class="text-primary">together</span>.</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-12">
+                        I'm always open to discussing new AI research, engineering opportunities, or innovative startups.
+                    </p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="mailto:{{EMAIL}}">
+<div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase">Email</p>
+<p class="text-lg font-bold">{{EMAIL}}</p>
+</div>
+</a>
+<div class="flex items-center gap-4 group">
+<div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary">share</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase">Social Networks</p>
+<div class="flex gap-4 mt-1">
+<a class="hover:text-primary transition-colors" href="{{LINKEDIN}}">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="{{GITHUB}}">GitHub</a>
+<a class="hover:text-primary transition-colors" href="{{PORTFOLIO}}">Personal Hub</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<form class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Name</label>
+<input class="w-full px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email</label>
+<input class="w-full px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Subject</label>
+<input class="w-full px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary" placeholder="AI Collaboration" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Message</label>
+<textarea class="w-full px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary" placeholder="Hello, I'd like to talk about..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-background-dark font-bold rounded-lg hover:opacity-90 transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+<p class="font-bold">© {{YEAR}} {{YOUR_NAME}}</p>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Open Source</a>
+</div>
+<div class="flex gap-4">
+<a class="p-2 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-lg leading-none">terminal</span>
+</a>
+<a class="p-2 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-lg leading-none">public</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="./scripts.js" defer></script>
+</body></html>

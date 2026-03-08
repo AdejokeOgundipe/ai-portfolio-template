@@ -1,0 +1,7 @@
+Please add your final resume PDF at this path: `cv/resume.pdf`.
+
+You can generate it by:
+- Editing `cv/resume.html` then printing to PDF from your browser and saving as `cv/resume.pdf`, OR
+- Converting `cv/resume-template.md` to PDF using pandoc (see `cv/README.md`).
+
+Once `cv/resume.pdf` exists, the "Download Resume" button on the site will download the file.

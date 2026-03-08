@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Name — Resume</title>
+  <style>
+    /* Simple printable resume styles */
+    :root{--accent:#2badee;font-family:Inter,system-ui,Arial,Helvetica,sans-serif}
+    body{color:#111;background:#fff;font-family:var(--font);line-height:1.25;margin:0;padding:24px}
+    .container{max-width:800px;margin:0 auto}
+    header{display:flex;justify-content:space-between;align-items:center}
+    h1{font-size:28px;margin:0}
+    h2{font-size:16px;margin:18px 0 8px}
+    p.lead{margin:8px 0 16px;color:#333}
+    ul{margin:0;padding-left:1.1rem}
+    .meta{font-size:13px;color:#333}
+    .section{margin-top:12px}
+    .skills{display:flex;gap:12px;flex-wrap:wrap}
+    .skill{background:#f2f4f6;padding:6px 8px;border-radius:6px;font-size:13px}
+    @media print{body{padding:12px} .container{max-width:100%}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Your Name</h1>
+        <div class="meta">AI / ML Engineer — City, Country • you@example.com • (000) 000-0000</div>
+      </div>
+      <div style="text-align:right">
+        <div style="color:var(--accent);font-weight:700">Website</div>
+        <div class="meta"><a href="#">your-site.example.com</a></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Summary</h2>
+      <p class="lead">Concise 2–3 sentence summary describing strengths, focus areas, and what you're looking for.</p>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div>
+        <strong>Senior ML Engineer</strong> — Company Name <span style="float:right">Dates</span>
+        <p>Short description of role. List achievements and responsibilities.</p>
+      </div>
+      <div>
+        <strong>Research Intern</strong> — Lab / University <span style="float:right">Dates</span>
+        <p>Short description; mention publications or notable outcomes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project Title</strong> — Short description. Tech: PyTorch, Docker. <a href="#">Repo</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">PyTorch</span>
+        <span class="skill">TensorFlow</span>
+        <span class="skill">Python</span>
+        <span class="skill">Docker</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <p>MSc in Computer Science — University Name, Year</p>
+    </section>
+
+    <footer style="margin-top:24px;font-size:12px;color:#666">Generated from `cv/resume-template.md` — edit the Markdown or this HTML and print to PDF for a downloadable resume.</footer>
+  </div>
+</body>
+</html>
