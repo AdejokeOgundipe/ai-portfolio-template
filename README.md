@@ -1,4 +1,4 @@
-# ai-portfolio-template
+# Ai Portfolio Template
 Reusable Portfolio Template
 
 This repository contains a minimal, reusable static portfolio template focused on AI / ML engineers and researchers. It uses Tailwind CSS via CDN so the template is easy to fork and customize without a build step.
